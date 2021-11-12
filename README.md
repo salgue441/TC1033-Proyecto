@@ -10,7 +10,7 @@ Materia: TC1033 - Pensamiento Computacional orientado a objetos
 Una empresa de carreras quiere clasificar los diferentes tipos de vehículos que utilizan la pista de carreras a lo largo del año. Los vehículos están separados en 3 categorías: rally, formula y drift. 
 
 ## Funcionalidad
-El programa permite clasificar los diferentes tipos de vehículos que transitan en la pista de carreras. 
+El programa permite clasificar los diferentes tipos de vehículos que transitan en la pista de carreras. El programa clasifica los vehículos de acuerdo al modelo del auto, número de llantas, número de pilotos, número de asientos y el peso total del vehículo. Para la clase de Formula tiene una función que determina si el peso total (vehículo + piloto + gasolina) sobrepasa lo establecido. Para la clase de Drift le pregunta al usuario ciertas consideraciones que permite al programa definir si es apto, puede hacer o no es apto para hacer drift.
 
-## Consideraciones
-El programa solo corre en la consola y esta hecho con el lenguaje de programación C++. Compilar con: g++ main.cpp, correr en linux-based systems: "./a.out" y para windows: "a.exe". 
+## Cómo correr el programa
+El programa solo corre en la consola y esta hecho con el lenguaje de programación C++. Compilar el programa con: g++ main.cpp, correr en linux-based systems con "./a.out" (aplica en MacOs) y para windows con "a.exe". 
