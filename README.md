@@ -11,3 +11,6 @@ Una empresa de carreras quiere clasificar los diferentes tipos de vehículos que
 
 ## Funcionalidad
 El programa permite clasificar los diferentes tipos de vehículos que transitan en la pista de carreras. 
+
+## Consideraciones
+El programa solo corre en la consola y esta hecho con el lenguaje de programación C++. Compilar con: g++ main.cpp, correr en linux-based systems: "./a.out" y para windows: "a.exe". 
