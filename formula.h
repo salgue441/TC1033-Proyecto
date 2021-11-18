@@ -94,7 +94,7 @@ float Formula::calcula_peso_con_piloto_y_gasolina(float peso, float peso_piloto,
     if (peso_total > 942) mensaje = " excede el límite establecido";
     else mensaje = " está dentro del límite establecido";
 
-    std::cout << "El vehículo ingresado tiene un peso que" << mensaje << " ;su peso total es: ";
+    std::cout << "El vehículo ingresado tiene un peso que" << mensaje << "; su peso total es: ";
     return peso_total;
 }
 
