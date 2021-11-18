@@ -35,20 +35,20 @@ public:
 
 /* Llenando getters y setters */
 // para modelo
-void Drift::set_modelo(std::string modelo) { modelo_de_auto = modelo; }
 std::string Drift::get_modelo() { return modelo_de_auto; }
+void Drift::set_modelo(std::string modelo) { modelo_de_auto = modelo; }
 
 // para llantas
-void Drift::set_numLlantas(int llantas) { num_llantas = llantas; }
 int Drift::get_numLlantas() { return num_llantas; }
+void Drift::set_numLlantas(int llantas) { num_llantas = llantas; }
 
 // para asientos
-void Drift::set_asientos(int asientos) { num_asientos = asientos; }
 int Drift::get_asientos() { return num_asientos; }
+void Drift::set_asientos(int asientos) { num_asientos = asientos; }
 
 // para pilotos
-void Drift::set_pilotos(int pilotos) { num_pilotos = pilotos; }
 int Drift::get_pilotos() { return num_pilotos; }
+void Drift::set_pilotos(int pilotos) { num_pilotos = pilotos; }
 
 /* Función que comprueba si el vehículo ingresado es apto para hacer drift. 
 Params: 
@@ -57,13 +57,12 @@ Params:
 */
 std::string Drift::es_apto_para_drift(std::string string_opcion)
 {
-    int op; 
     std::string result;
+    int op; 
 
     std::cout << "Selecciona el tipo de trasmición: 1. Manual \t2. Automático :";
     std::cin >> op;
-    std::cout << "\nEl vehículo es 4 x 4? (Si/no)";
-    std::cin >> string_opcion;
+    std::cout << "[parámetro] El vehículo es 4 x 4?" << std::endl;
 
     // condicionales
     if (op == 1 && (string_opcion == "si" || string_opcion == "Si")) 
