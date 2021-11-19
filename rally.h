@@ -96,7 +96,6 @@ objeto.
 parámetros:
     - campeonato de tipo string. El usuario ingresa un campeonato de rally.
 */
-
 bool Rally::verifica_campeonato(std::string campeonato)
 {
     campeonato = campeonato_nombre[1];
