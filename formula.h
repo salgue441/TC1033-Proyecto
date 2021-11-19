@@ -5,13 +5,13 @@ class Formula
 private:
     // variables de instancia
     std::string nombre_vehiculo, nombre_del_piloto[50], nombre_escuderia[50];
-    int num_llantas, asientos_disp, caracteres_escuderia, caracteres_piloto;
+    int num_llantas, asientos_disp, caracteres_escuderia, caracteres_piloto, num_de_vehiculo;
     float peso_vehiculo;
 
 public:
     /* ---- Constructores ---- */
     // Constructor default
-    Formula() : nombre_vehiculo(""), num_llantas(4), asientos_disp(1), peso_vehiculo(752)
+    Formula() : nombre_vehiculo(""), num_llantas(4), asientos_disp(1), peso_vehiculo(752), num_de_vehiculo(1)
     {
         // para nombre del piloto
         for (int i = 0; i < 50; i++)
@@ -23,9 +23,9 @@ public:
      };
 
     // constructor con parámetros
-    Formula(std::string nombre, int numero_llantas, int numero_asientos, float peso) :
+    Formula(std::string nombre, int numero_llantas, int numero_asientos, float peso, int numero) :
             nombre_vehiculo(nombre), num_llantas(numero_llantas), 
-            asientos_disp(numero_asientos), peso_vehiculo(peso) 
+            asientos_disp(numero_asientos), peso_vehiculo(peso), num_de_vehiculo(numero)
     {
         // para nombre del piloto
         for (int i = 0; i < 50; i++)
@@ -53,6 +53,10 @@ public:
     void set_peso_auto(float );
     float get_peso_auto();
 
+    // para numero de vehiculo
+    void set_numero_auto(int );
+    int get_numero_auto();
+
     /* ---- Funciones ---- */
     float calcula_peso_con_piloto_y_gasolina(float, float, float);
     void agrega_escuderia(std::string );
@@ -77,6 +81,10 @@ void Formula::set_asientos(int numero_asientos) { asientos_disp = numero_asiento
 // getter y setter para peso
 float Formula::get_peso_auto() { return peso_vehiculo; }
 void Formula::set_peso_auto(float peso) { peso_vehiculo = peso; }
+
+// getter y setter para num_de_vehiculo
+int Formula::get_numero_auto() { return num_de_vehiculo; }
+void Formula::set_numero_auto(int numero) { num_de_vehiculo = numero; }
 
 /* ---- Llenado de funciones ---- */
 /* Función que calcula el peso total del vehículo con el piloto + gasolinas y retorna si el 
