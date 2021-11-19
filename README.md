@@ -14,3 +14,7 @@ El programa permite clasificar los diferentes tipos de vehículos que transitan 
 
 ## Cómo correr el programa
 El programa solo corre en la consola y esta hecho con el lenguaje de programación C++. Compilar el programa con: g++ main.cpp, correr en linux-based systems con "./a.out" (aplica en MacOs) y para windows con "a.exe". 
+``` 
+g++ main.cpp 
+./a.out
+```
