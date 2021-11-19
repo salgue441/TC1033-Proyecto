@@ -4,14 +4,14 @@ class Formula
 {   
 private:
     // variables de instancia
-    std::string nombre_vehiculo, nombre_del_piloto[50], nombre_escuderia[50];
+    std::string modelo_vehiculo, nombre_del_piloto[50], nombre_escuderia[50];
     int num_llantas, asientos_disp, caracteres_escuderia, caracteres_piloto, num_de_vehiculo;
     float peso_vehiculo;
 
 public:
     /* ---- Constructores ---- */
     // Constructor default
-    Formula() : nombre_vehiculo(""), num_llantas(4), asientos_disp(1), peso_vehiculo(752), num_de_vehiculo(1)
+    Formula() : modelo_vehiculo(""), num_llantas(4), asientos_disp(1), peso_vehiculo(752), num_de_vehiculo(1)
     {
         // para nombre del piloto
         for (int i = 0; i < 50; i++)
@@ -24,7 +24,7 @@ public:
 
     // constructor con parámetros
     Formula(std::string nombre, int numero_llantas, int numero_asientos, float peso, int numero) :
-            nombre_vehiculo(nombre), num_llantas(numero_llantas), 
+            modelo_vehiculo(nombre), num_llantas(numero_llantas), 
             asientos_disp(numero_asientos), peso_vehiculo(peso), num_de_vehiculo(numero)
     {
         // para nombre del piloto
@@ -67,8 +67,8 @@ public:
 
 /* ---- Llenando los getters y setter ---- */ 
 // getter y setter para nombre del vehículo
-std::string Formula::get_nombre() { return nombre_vehiculo; }
-void Formula::set_nombre(std::string nombre) { nombre_vehiculo = nombre; }
+std::string Formula::get_nombre() { return modelo_vehiculo; }
+void Formula::set_nombre(std::string nombre) { modelo_vehiculo = nombre; }
 
 // getter y setter para llantas
 int Formula::get_llantas() { return num_llantas; }
