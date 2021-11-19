@@ -7,12 +7,13 @@ int main()
 {
     /* ---- objeto de clase formula ---- */
     std::cout << "---- Objeto de clase F1 ----" << std::endl;
-    Formula f1("Ascari KZ1", 4, 1, 752); // objetos con valores de entrada
+    Formula f1("Ascari KZ1", 4, 1, 752, 95); // objetos con valores de entrada
     // mostrando los valores
     std::cout << "Datos del objeto: \n" << "Modelo del vehículo: " << f1.get_nombre() << "\n"
                   << "Número de llantas: " << f1.get_llantas() << "\n"
                   << "Número de asientos: " << f1.get_asientos() << "\n" 
-                  << "Peso del vehículo: " << f1.get_peso_auto() << std::endl << std::endl;
+                  << "Peso del vehículo: " << f1.get_peso_auto() << "\n" 
+                  << "Número identificador: " << f1.get_numero_auto() << std::endl << std::endl;
     
     // verifica el peso total del vehículo ingresado
     std::cout << "El peso del vehículo tiene que ser menor o igual a 942 kilogramos" << std::endl;
@@ -30,7 +31,7 @@ int main()
 
     /* ---- objeto de clase drift ---- */
     std::cout << "\n---- Objeto de clase Drift ----" << std::endl;
-    Drift carro_drift1("BMW M2 Competition", 4, 2, 2); // objeto con valores de entrada
+    Drift carro_drift1("BMW M2 Competition", 4, 2, 2, 120); // objeto con valores de entrada
     std::cout << "Datos del objeto: \n" << "Modelo del vehículo: " << carro_drift1.get_modelo() << "\n" 
               << "Número de llantas: " << carro_drift1.get_numLlantas() << "\n"
               << "Número de asientos disponibles: " << carro_drift1.get_asientos() << "\n"
@@ -47,6 +48,11 @@ int main()
               << "Número identificador del vehículo: " << carro_rally.get_numero() << "\n" 
               << "Número de pilotos: " << carro_rally.get_pilotos() << "\n" 
               << "Peso del vehículo: " << carro_rally.get_peso() << " kg" << std::endl;
+
+    // tipo de campeonato
+    carro_rally.campeonato_rally("Junior");
+    std::cout << "\n Si = 1, No = 0:  " << carro_rally.verifica_campeonato("Junior") << std::endl;
+
     
     return 0;
 }
