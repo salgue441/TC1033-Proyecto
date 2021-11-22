@@ -1,82 +1,48 @@
 #include <iostream>
+#include "vehiculo.h"
 
-class Rally
+class Rally : public Vehiculo
 {
 private:
-    std::string modelo_vehiculo, campeonato_nombre[10];
-    int num_llantas, num_de_vehiculo, num_pilotos, caracteres_campeonato;
+    int litros_de_gasolina, caracteres_campeonato;
     float peso_vehiculo;
+    std::string campeonato_nombre[10];
 
 public:
-    // constructor default
-    Rally() : modelo_vehiculo("None"), num_llantas(4), num_de_vehiculo(0), num_pilotos(1), 
-            peso_vehiculo(1230) 
+    /* ---- Constructor ---- */
+    Rally(std::string nombre, int llantas, int asientos, int piloto, int identificador, int litros, float peso) : 
+        Vehiculo(nombre, llantas, asientos, piloto, identificador), 
+        litros_de_gasolina(litros), peso_vehiculo(peso)
     { 
         for (int i = 0; i < 10; i++)
             campeonato_nombre[i] = "";
-    }; 
+    }
 
-    // custom constructor
-    Rally(std::string modelo, int llantas, int numero, int pilotos, float peso) :
-         modelo_vehiculo(modelo), num_llantas(llantas), num_de_vehiculo(numero), 
-         num_pilotos(pilotos), peso_vehiculo(peso) 
-    {
-        for (int i = 0; i < 10; i++)
-            campeonato_nombre[i] = "";
-    };
+    /* ---- Getters y Setteres ---- */
+    // para gasolina
+    int get_litros_gas();
+    void set_litros_gas(int );
 
-    /* ---- setters y getters ---- */
-    // para modelo
-    void set_modelo(std::string );
-    std::string get_modelo();
-
-    // para llantas
-    void set_llantas(int );
-    int get_llantas();
-
-    // para num-vehículo
-    void set_numero(int );
-    int get_numero();
-
-    // para num-pilotos
-    void set_pilotos(int );
-    int get_pilotos();
-
-    // para peso del vehículo
-    void set_peso(float );
+    // para peso
     float get_peso();
-
+    void set_peso(float );
+    
     /* ---- Funciones ---- */
     void campeonato_rally(std::string );
     bool verifica_campeonato(std::string );
 };
 
-/* ---- llenando los getters y setters ---- */
-// para modelo_vehiculo
-std::string Rally::get_modelo() { return modelo_vehiculo; }
-void Rally::set_modelo(std::string modelo) { modelo_vehiculo = modelo; }
+/* ---- Llenando getters y setters ---- */
+int Rally::get_litros_gas() { return litros_de_gasolina; }
+void Rally::set_litros_gas(int litros) { litros_de_gasolina = litros; }
 
-// para llantas
-int Rally::get_llantas() { return num_llantas; }
-void Rally::set_llantas(int llantas) { num_llantas = llantas; }
-
-// para num_vehículo
-int Rally::get_numero() { return num_de_vehiculo; }
-void Rally::set_numero(int numero) { num_de_vehiculo = numero; }
-
-// para num-pilotos
-int Rally::get_pilotos() { return num_pilotos; }
-void Rally::set_pilotos(int pilotos) { num_pilotos = pilotos; }
-
-// para peso del vehículo
 float Rally::get_peso() { return peso_vehiculo; }
 void Rally::set_peso(float peso) { peso_vehiculo = peso; }
 
 /* ---- Funciones ---- */
-/*
-Función que agrega el nombre del campeonato de Rally. 
+/* Función que agrega el nombre del campeonato de Rally. 
 Los tipos disponibles son: WRC, WRC2, WRC3, Junior WRC
-parámetros:
+params:
     - campeontao de tipo string. Aquí el usuario selecciona el tipo de campeonato
 */
 void Rally::campeonato_rally(std::string campeonato)
