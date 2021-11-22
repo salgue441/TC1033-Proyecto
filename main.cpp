@@ -48,7 +48,8 @@ int main()
 
     // tipo de campeonato
     carro_rally.campeonato_rally("Junior");
-    std::cout << "\nEl campeonato fue encontrado (Si = 1, No = 0):  " << carro_rally.verifica_campeonato("Junior") << std::endl;
+    std::cout << "\nEl campeonato fue encontrado (Si = 1, No = 0):  " 
+              << carro_rally.verifica_campeonato("Junior") << std::endl;
     
     return 0;
 }
