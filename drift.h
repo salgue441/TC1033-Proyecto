@@ -22,7 +22,7 @@ public:
     std::string es_apto_para_drift(std::string );
 };
 
-/* ---- Llenado de la función ---- */
+/* ---- Llenado de getter y setter ---- */
 std::string Drift::get_trasmicion() { return trasmicion_vehiculo; }
 void Drift::set_trasmicion(std::string trasmicion) { trasmicion_vehiculo = trasmicion; }
 
