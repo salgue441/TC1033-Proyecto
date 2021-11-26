@@ -93,6 +93,6 @@ int main()
               << std::endl;
 
     // verificando si es apto para hacer drift
-    std:: cout << drift1.es_apto_para_drift("manual") << std::endl;
+    std:: cout << std::endl << drift1.es_apto_para_drift("manual") << std::endl;
     return 0;
 }
