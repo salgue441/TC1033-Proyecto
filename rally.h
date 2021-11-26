@@ -1,43 +1,37 @@
-#include <iostream>
+#ifndef RALLY_H
+#define RALLY_H
+
 #include "vehiculo.h"
 
 class Rally : public Vehiculo
 {
 private:
     int litros_de_gasolina, caracteres_campeonato;
-    float peso_vehiculo;
     std::string campeonato_nombre[10];
 
 public:
     /* ---- Constructor ---- */
-    Rally(std::string nombre, int llantas, int asientos, int piloto, int identificador, int litros, float peso) : 
-        Vehiculo(nombre, llantas, asientos, piloto, identificador), 
-        litros_de_gasolina(litros), peso_vehiculo(peso)
-    { 
+    Rally(std::string nombre, int llantas, int asientos, int piloto, int ID, int litros, float peso) : 
+        Vehiculo(nombre, llantas, asientos, piloto, ID, peso), 
+        litros_de_gasolina(litros) 
+    {
         for (int i = 0; i < 10; i++)
             campeonato_nombre[i] = "";
-    }
+    };
 
-    /* ---- Getters y Setteres ---- */
+    /* ---- Getters y setters ---- */
     // para gasolina
     int get_litros_gas();
     void set_litros_gas(int );
 
-    // para peso
-    float get_peso();
-    void set_peso(float );
-    
     /* ---- Funciones ---- */
     void campeonato_rally(std::string );
     bool verifica_campeonato(std::string );
 };
 
-/* ---- Llenando getters y setters ---- */
+/* ---- Llenando el getter y setter ---- */
 int Rally::get_litros_gas() { return litros_de_gasolina; }
 void Rally::set_litros_gas(int litros) { litros_de_gasolina = litros; }
-
-float Rally::get_peso() { return peso_vehiculo; }
-void Rally::set_peso(float peso) { peso_vehiculo = peso; }
 
 /* ---- Funciones ---- */
 /* Función que agrega el nombre del campeonato de Rally. 
@@ -52,8 +46,7 @@ void Rally::campeonato_rally(std::string campeonato)
         campeonato_nombre[caracteres_campeonato] = campeonato;
         caracteres_campeonato++;
     }
-
-    std::cout << campeonato;
+    std::cout << "El campeonato ingresado es: " << campeonato << std::endl;
 }
 
 /*
@@ -67,8 +60,8 @@ bool Rally::verifica_campeonato(std::string campeonato)
     campeonato = campeonato_nombre[1];
     for (int i = 1; i < 10; i++)
         if (campeonato_nombre[i] == campeonato)
-        {
             return true;
-        }
     return false;
 }
+
+#endif // !RALLY_H
