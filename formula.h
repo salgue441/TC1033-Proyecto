@@ -6,7 +6,6 @@
 class Formula : public Vehiculo
 {
 private:
-    float peso_vehiculo;
     std::string nombre_escuderia[50];
     int caracteres_escuderia;
 
