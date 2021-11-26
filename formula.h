@@ -1,30 +1,28 @@
-#include <string>
+#ifndef FORMULA_H
+#define FORMULA_H
+
 #include "vehiculo.h"
 
 class Formula : public Vehiculo
-{  
+{
 private:
     float peso_vehiculo;
-    std::string nombre_escuderia[50], nombre_piloto[50];
-    int caracteres_escuderia, caracteres_piloto;
+    std::string nombre_escuderia[50];
+    int caracteres_escuderia;
 
 public:
     /* ---- Constructor ---- */
-    Formula(std::string nombre, int llantas, int asientos, int piloto, int identificador) : 
-        Vehiculo(nombre, llantas, asientos, piloto, identificador) { 
+    Formula(std::string modelo, int llantas, int asientos, int piloto, int ID, float peso) : 
+        Vehiculo(modelo, llantas, asientos, piloto, ID, peso) 
+    {
         for (int i = 0; i < 50; i++)
             nombre_escuderia[i] = "";
-
-        for (int i = 0; i < 50; i++)
-            nombre_piloto[i] = "";
     };
 
-    /* ---- funciones ---- */
-    void calcula_peso_con_piloto_y_gasolina(float , float , float);
+    /* ---- Funciones ---- */
     void agrega_escuderia(std::string );
-    void agrega_piloto(std::string );
     bool verifica_escuderia(std::string );
-    bool verifica_piloto(std::string );
+    void calcula_peso_con_piloto(float, float, float);
 };
 
 /* ----  Llenando funciones ---- */
@@ -38,7 +36,7 @@ params:
     - peso_piloto de tipo float, peso del piloto - lo establecido por la FIA es de 80 kgs.
     - peso_gas de tipo float, peso de la gasolina en el vehiculo - establecido por la fia son 110 kgs
 */ 
-void Formula::calcula_peso_con_piloto_y_gasolina(float peso, float peso_piloto, float peso_gas)
+void Formula::calcula_peso_con_piloto(float peso, float peso_piloto, float peso_gas)
 {
     float peso_total = peso + peso_piloto + peso_gas, peso_lim = 942, peso_diferencia;
     std::string mensaje = "";
@@ -83,31 +81,4 @@ bool Formula::verifica_escuderia(std::string escuderia)
     return false;
 }
 
-/* Función que agrega el nombre del piloto a la que pertenece el objeto. No devuelve nada ni 
-muestra nada al usuario. 
-params:
-    - nombre del piloto de tipo string (caracteres)
-
-*/
-void Formula::agrega_piloto(std::string piloto)
-{
-    if (caracteres_piloto < 50)
-    {
-        nombre_piloto[caracteres_piloto] = piloto;
-        caracteres_piloto++;
-    }
-}
-
-/* Función que verifica si el nombre del piloto ingresado por el usuario se encuentra 
-entre los atributos del objeto 
-params:
-    - nombre del piloto
-*/
-bool Formula::verifica_piloto(std::string piloto)
-{
-    piloto = nombre_piloto[0];
-    for (int i = 1; i < 49; i++)
-        if (nombre_piloto[i] == piloto)
-            return true;
-    return false;
-}
+#endif // !FORMULA_H
