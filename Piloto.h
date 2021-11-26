@@ -16,7 +16,6 @@ public:
 										nacionalidad(pais),
 										edad_piloto(edad),
 										num_ID_piloto(ID_piloto)
-																	num_ID_piloto(ID_piloto) 
 	{};
 
 	/* ---- Getters y setters ---- */
