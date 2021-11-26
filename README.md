@@ -24,3 +24,6 @@ El programa solo corre en la consola y esta hecho con el lenguaje de programaci√
 g++ main.cpp -o main
 ./a.out
 ```
+
+## Cambios de la entrega
+Correcciones del avance pasado. En esta entrega se agrerga herencia y agregaci√≥n - update al diagrama de UML
