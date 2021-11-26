@@ -7,7 +7,7 @@ Nombre: Carlos Rodrigo Salguero Alcántara
   
   Matrícula: A00833341
   
-  Materia: TC1033 - Pensamiento Computacional orientado a objetos
+  Materia: TC1033 - Pensamiento Computacional Orientado a Objetos
   
   Proyecto: clasificador de vehículos de una pista de carreras
 
