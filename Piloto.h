@@ -13,9 +13,10 @@ public:
 	/* ---- Constructores ---- */
 	Piloto() : nombre_piloto("None"), nacionalidad("None"), edad_piloto(18), num_ID_piloto(1) {};
 	Piloto(std::string nombre, std::string pais, int edad, int ID_piloto) : nombre_piloto(nombre), 
-																			nacionalidad(pais), 
-																			edad_piloto(edad), 
-																			num_ID_piloto(ID_piloto) 
+										nacionalidad(pais),
+										edad_piloto(edad),
+										num_ID_piloto(ID_piloto)
+																	num_ID_piloto(ID_piloto) 
 	{};
 
 	/* ---- Getters y setters ---- */
@@ -63,4 +64,4 @@ bool Piloto::verifica_edad(int edad)
 	else return false;
 }
 
-#endif
+#endif // !PILOTO_H
