@@ -25,5 +25,5 @@ g++ main.cpp -o main
 ./a.out
 ```
 
-## Cambios de la entrega
-Correcciones del avance pasado. En esta entrega se agrerga herencia y agregación - update al diagrama de UML
+## Revisión
+Diseño clases sencillas completas (con todos los atributos y métodos requeridos).
