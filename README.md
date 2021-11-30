@@ -26,4 +26,4 @@ g++ main.cpp -o main
 ```
 
 ## Revisión
-Diseño clases sencillas completas (con todos los atributos y métodos requeridos).
+Toma de decisiones - SICT0302A : Diseño clases sencillas completas (con todos los atributos y métodos requeridos).
