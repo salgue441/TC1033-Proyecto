@@ -24,6 +24,3 @@ El programa solo corre en la consola y esta hecho con el lenguaje de programaci�
 g++ main.cpp -o main
 ./a.out
 ```
-
-## Revisión
-Toma de decisiones - SICT0302A : Diseño clases sencillas completas (con todos los atributos y métodos requeridos).
