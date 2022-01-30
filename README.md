@@ -1,4 +1,4 @@
-# TC1033-Proyecto
+# Clasificador de vehículos 
 Proyecto integrador de la materia TC1033. 
   Utiliza el lenguaje de programación C++.
 
